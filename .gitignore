@@ -9,3 +9,8 @@ __pycache__/
 .ipynb_checkpoints/
 .Rhistory
 .RData
+
+# Generated analysis extracts. Recreate with scripts/extract_sources.py.
+data/processed/*
+!data/processed/
+!data/processed/.gitkeep
