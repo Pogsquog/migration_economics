@@ -1,0 +1,11 @@
+# Downloaded source data. Recreate with scripts/download_sources.sh.
+data/sources/*
+!data/sources/
+!data/sources/SOURCES.md
+
+# Local Python/R byproducts from analysis work.
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.Rhistory
+.RData
