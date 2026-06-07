@@ -14,3 +14,6 @@ __pycache__/
 data/processed/*
 !data/processed/
 !data/processed/.gitkeep
+
+# AI stuff
+.junie/
