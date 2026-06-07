@@ -52,6 +52,7 @@ REGION_ALIASES = {
     "south west": ("E12000009", "South West"),
     "united kingdom": ("K02000001", "United Kingdom"),
     "uk": ("K02000001", "United Kingdom"),
+    "uk total": ("K02000001", "United Kingdom"),
     "wales": ("W92000004", "Wales"),
     "west midlands": ("E12000005", "West Midlands"),
     "yorkshire and the humber": ("E12000003", "Yorkshire and The Humber"),
@@ -115,10 +116,16 @@ INDUSTRY_ALIASES = {
 NATIONALITY_ALIASES = {
     "all": ("TOTAL", "Total"),
     "eu": ("EU", "EU"),
+    "eu14": ("EU14", "EU14"),
     "eu nationals": ("EU", "EU"),
+    "eu2": ("EU2", "EU2"),
+    "eu8": ("EU8", "EU8"),
     "non-eu": ("NON_EU", "Non-EU"),
     "non eu": ("NON_EU", "Non-EU"),
     "non-eu nationals": ("NON_EU", "Non-EU"),
+    "other eu": ("OTHER_EU", "Other EU"),
+    "rest of world": ("NON_EU", "Non-EU"),
+    "row": ("NON_EU", "Non-EU"),
     "total": ("TOTAL", "Total"),
     "uk": ("UK", "UK"),
     "uk nationals": ("UK", "UK"),
@@ -131,7 +138,12 @@ SHEET_REGION_OVERRIDES = {
 
 NATIONALITY_PATTERNS = [
     ("non-EU", re.compile(r"^(?:total\s+)?non[- ]?eu nationals employment counts", re.I)),
+    ("EU14", re.compile(r"^(?:total\s+)?eu14 nationals employment counts", re.I)),
+    ("EU8", re.compile(r"^(?:total\s+)?eu8 nationals employment counts", re.I)),
+    ("EU2", re.compile(r"^(?:total\s+)?eu2 nationals employment counts", re.I)),
+    ("Other EU", re.compile(r"^(?:total\s+)?other eu nationals employment counts", re.I)),
     ("EU", re.compile(r"^(?:total\s+)?eu nationals employment counts", re.I)),
+    ("EU", re.compile(r"^total eu employment counts", re.I)),
     ("UK", re.compile(r"^(?:total\s+)?uk nationals employment counts", re.I)),
     ("Total", re.compile(r"^total employment counts", re.I)),
 ]
