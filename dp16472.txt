@@ -1,0 +1,631 @@
+DISCUSSION PAPER SERIES
+IZA DP No. 16472
+Hoseong Nam
+Jonathan Portes
+Migration and Productivity in the UK:  
+An Analysis of Employee Payroll Data
+SEPTEMBER 2023
+Any opinions expressed in this paper are those of the author(s) and not those of IZA. Research published in this series may 
+include views on policy, but IZA takes no institutional policy positions. The IZA research network is committed to the IZA 
+Guiding Principles of Research Integrity.
+The IZA Institute of Labor Economics is an independent economic research institute that conducts research in labor economics 
+and offers evidence-based policy advice on labor market issues. Supported by the Deutsche Post Foundation, IZA runs the 
+world’s largest network of economists, whose research aims to provide answers to the global labor market challenges of our 
+time. Our key objective is to build bridges between academic research, policymakers and society.
+IZA Discussion Papers often represent preliminary work and are circulated to encourage discussion. Citation of such a paper 
+should account for its provisional character. A revised version may be available directly from the author.
+Schaumburg-Lippe-Straße 5–9
+53113 Bonn, Germany
+Phone: +49-228-3894-0
+Email: publications@iza.org www.iza.org
+IZA – Institute of Labor Economics
+DISCUSSION PAPER SERIES
+ISSN: 2365-9793
+IZA DP No. 16472
+Migration and Productivity in the UK:  
+An Analysis of Employee Payroll Data
+SEPTEMBER 2023
+Hoseong Nam
+King’s College London
+Jonathan Portes
+King’s College London and IZA
+ABSTRACT
+IZA DP No. 16472 SEPTEMBER 2023
+Migration and Productivity in the UK:  
+An Analysis of Employee Payroll Data
+We investigate the impact of immigration on productivity in the UK, using newly published 
+ONS data on employees of non-UK origin by region and sector. Consistent with earlier 
+research, we find some evidence of a positive association between non-EU migration and 
+productivity, and some weaker evidence of a negative association between EU migration 
+and productivity, although results are sensitive to the specifications used.
+JEL Classification: F22, J48, J61, J68
+Keywords: migration, productivity, labour markets, Brexit
+Corresponding author:
+Jonathan Portes
+Department of Political Economy
+King’s College
+London
+United Kingdom
+Email: jonathan.portes@kcl.ac.uk
+ 
+ 
+Introduction 
+ 
+Productivity is the key driver of economic growth and welfare; as Paul Krugman (1997) put it, 
+“productivity isn’t everything, but in the long run it is almost everything.”  The UK’s relatively 
+poor economic performance since the 2008 financial crisis, and the resulting slow growth in 
+overall living standards (and even slower growth in real wages) is largely the result of a sharp 
+fall in productivity growth, which had averaged close to 2% per year prior to the crisis , to 
+approximately 0.3% in the years after.   
+ 
+Meanwhile, immigration to the UK rose sharply, beginning in 1997, and even further after 
+2004, when the accession to the EU of new member states from central and Eastern Europe 
+led both to a sharp rise in immigration and to a reorientation of migration flo ws to the UK 
+away from historical source countries to the new EU member states, which increased further 
+after the later accession of Bulgaria and Romania.  
+ 
+While the  timing of the sharp fall in productivity does not match that of the increase in 
+migration, the latter has been advanced by some as one possible cause of the productivity 
+slowdown. This issue was brought into sharp focus by the Brexit referendum where the Leave 
+campaign argued that freedom of movement had led to a large increase in lower skilled 
+migration, which had depressed both UK wages and productivity growth, and that Brexit 
+would enable the UK to reorient its migration system towards higher skilled workers, with an 
+accompanying rise in productivity.   
+ 
+The new points -based migration system, introduced in 2021, does indeed end freedom of 
+movement; migrants are now eligible for work visas on the basis of salary, skill level and (in 
+some cases) specific occupations.   However, even before it was introduced, there was a sharp 
+fall in migration from the EU (and, during the pandemic, substantial return  migration) while 
+migration from outside the EU rose steadily.   
+ 
+The impact of migration – and in particular the differential impacts, depending on the type of 
+worker – are therefore of substantial public and policy interest, both in assessing the likely 
+impact of the new migration system and in determining what, if any , contribution migration 
+policy can make towards addressing the UK’s productivity problem.  
+ 
+Theoretical considerations 
+ 
+The theoretical impact of immigration on productivity is ambiguous, because there are  a 
+number of conceptually different mechanisms that are potentially at work. As discussed in 
+Campo, Forte and Portes (2018), these include: 
+ 
+• The simple “batting average” effect. If individual immigrants are more or less 
+productive on average than natives, they will directly raise or lower productivity for 
+the whole economy, or the particular locality or sector that they are employed in, even 
+if they don’t affect the productivity of natives; 
+ 
+• Within-firm complementarities, where immigrants increase the productivity of natives 
+in the same firm (or, conceivably, reduce it, if for example there are increased frictions 
+within the firm, perhaps because of language differences); 
+ 
+• Within-sector spillovers, because of economies of scale, clustering effects, and/or 
+increased competition; 
+ 
+• Local or geographical effects, again because of complementarities – for example the 
+availability of low-skilled immigrant workers could increase the productivity or labour 
+supply of high skilled native workers (Barone and Mocetti, 2011; Peri, Romiti, and 
+Rossi, 2015); 
+ 
+• Incentive effects: immigration could increase or decrease the incentive for native 
+workers to acquire human capital, either general or sector-specific, depending on the 
+type of immigration and how it impacted wages and labour demand; 
+ 
+• Impacts on investment. If immigration reduced the incentive to invest in productivity-
+enhancing capital – perhaps the availability of low-skilled labour makes it uneconomic 
+to invest in automation – then it could reduce productivity. On the other hand, 
+someinvestment might be complementary to the skills of immigrants. 
+ 
+It is worth listing and distinguishing these possible mechanisms, since they have different 
+implications for empirical analysis. For example, if the impact of immigration on productivity 
+operates primarily at a sectoral or firm level, then the definition o f the appropriate labour 
+market in which to estimate the impacts will be different than if it operates at a geographical 
+level. 
+Literature Review  
+ 
+In contrast to the labour market impacts on jobs and wages, for which there exists now an 
+extensive literature, the evidence for the UK (or indeed internationally) on the impact of 
+migration on productivity is has started to build up only recently. As a result, there is not as 
+yet a clear consensus on either the sign or the magnitude of the possible impacts; 
+nevertheless, it is worth reviewing the available empirical evidence on the topic. 
+ 
+At a cross-country level, Ortega and Peri (2014) examine the impact of both immigration and 
+trade on income: they find that while openness to trade and migration both boost per capita 
+income, migration has considerably larger impacts than trade; moreover, the impact of 
+migration takes place chiefly via a positive effect on  TFP. However, their cross -sectional 
+dataset is dominated by developing countries. Taking a different approach, Alesina, Harnoss, 
+and Rapoport (2016) analyse the relationship between birthplace diversity – which they show 
+is unrelated to traditional measures of diversity – and macroeconomic performance, showing 
+that economic output is positively related with diversity caused by immigration, with 
+immigrants from richer and culturally proximate countries being associated with higher 
+productive effects. 
+ 
+Similarly, Jaumotte, Koloskova, and Saxena (2016) apply a similar specification to that of 
+Ortega and Peri to a panel of selected countries, finding that a 1% increase in the migrant 
+share of the adult population results in an increase in GDP per capita an d productivity of 
+approximately 2 percent: this is a very large  impact. The findings are consistent across a 
+variety of empirical specifications, although again the study analyses a limited dataset.  
+ 
+Within countries, there exists a small but growing body of research looking at the relationship 
+between immigration and labour productivity. For the US, Ottaviano and Peri (2006) find 
+evidence of diversity positively affecting the productivity of workers i n major cities, going as 
+far as stating that “data support the hypothesis of a positive productivity effect of diversity 
+with causation running from diversity to productivity of US workers”  (p. 38) . Peri (2012) 
+decomposes multiple components of output growth and estimates the impact of immigration 
+on each, fin ding that immigration is consistently associated with increases in total factor 
+productivity in excess of 1% (which is found to be sufficient to counteract the lower associated 
+growth of skill intensity and skill bias of production).  
+ 
+In the UK, Ottaviano, Peri, and Wright (2018) analyse the services sector and find that a 1% 
+increase in immigrant inflow in the firms’ locality is associated with an increase in labour 
+productivity within the firm. It is however worth noting that, for lack of more granular data, 
+their strategy relies on matching firm -level data with immigrant population estimated at 
+TTWA level from the Labour Force Survey, which can present significant measurement error. 
+Using the same data sources, Rolfe et al. (2013) look at productivity by region and sector and, 
+although they do not attempt to establish causality, they find immigrant share to be positively 
+associated with labour productivity; additionally, they provide significant qualitative evidence 
+of the complementarity between domestic and foreign workers. 
+ 
+The most recent relevant research in this area was prepared for the UK government’s 
+Migration Advisory Committee .  Campo et al. (2018) exploit geographical variation in the 
+migrant share of the workforce, using an instrumental variable approach, to estimate the 
+impact of immigration on productivity.  They find that a one percentage point increase in the 
+share of immigrants within a UK local authority is associated with an almost three percentage 
+point increase in productivity (measured as the growth in gros s value output per head over 
+the period considered).  
+ 
+Costas-Fernández (2018) assumes a CES production function and incorporates new estimates 
+of the capital stock at a regional and sector level. The study finds that both migrants in high - 
+and low -skilled occupations are, at the margin, more productive than t heir UK -born 
+counterparts, with the central estimates suggesting that the marginal migrant is around 2.5 
+times as productive as a UK -born worker. Finally, Smith (2018) also looks at a region -sector 
+level, but the key dependent variable is total factor prod uctivity (TFP) rather than labour 
+productivity; she also uses firm -level data and imposes less structure on the production 
+function. The central estimate is that a one percentage point increase in the migrant share 
+results in a 1.6 per cent increase in TFP.  
+ 
+Summarising the results, the MAC concluded: “Overall the existing literature and the studies 
+we commissioned point towards immigration having a positive impact on productivity but the 
+results are subject to significant uncertainty. While the evidence on ov erall migration is not 
+entirely conclusive the evidence perhaps unsurprisingly suggests that high -skilled migrants 
+have a more positive impact” (Migration Advisory Committee, 2018, p. 2). 
+ 
+Overall, the message from these papers is that the impact of immigration on productivity is 
+generally positive, but effect sizes are likely to vary depend both on the nature of the 
+economy and labour market and that of the immigrant workforce. 
+ 
+. 
+Data description 
+ 
+We require data both on productivity and employment disaggregated between migrants and 
+non-migrants.  For the latter, existing empirical analysis in the UK has almost exclusively made 
+use of the Labour Force Survey (and/or the related Annual Population Survey), the main 
+regular UK household survey used for labour market analysis, and the source of official figures 
+on employment.  The Labour Force Survey incl udes a question on country of birth, enabling 
+the identification of migrants.  The analyses described above therefore construct variables 
+showing migrant penetration of the workforce; this is the key explanatory variable. 
+ 
+However, while the LFS is the standard data source for this type of analysis over a range of 
+labour market issues, sample sizes are not large when it come s to migrants  – especially 
+outside London.  This issue is particularly acute when looking at (as we do) data by region and 
+sector, where some region-sectors outside London will have very few migrants in any given 
+quarterly (or even annual) sample.  All the UK-focused papers above suffer from this limitation. 
+ 
+Our analysis, by contrast, makes no use of the LFS . Instead, we use a new experimental data 
+set from HM Revenue and Customs' (HMRC). HMRC publish data on migrant workers from 
+the Pay As You Earn (PAYE) Real Time Information (RTI) system.  Unlike the LFS, it covers the 
+whole population rather than a sample; it is based on a count of all payrolled emp loyee jobs 
+that were active in a given month using HMRC's PAYE RTI data.  This information is then 
+combined with the HMRC Migrant Worker Scan (MWS).  This uses input from the Department 
+for Work and Pensions (DWP) which registers National Insurance numbers for those aged over 
+16 years through its adult registration process, which usually includes an interview to verify 
+identity and right to residency in the UK.   
+ 
+Combining this information allows the data to be disaggregated between those who were 
+either born in the UK or arrived here before the age of 16, and those who were registered as 
+adults. Within that, the published data disaggregates between those who are of EU origin and 
+those from outside the EU.  The data is therefore divided into three groups – EU origin 
+employees, non -EU original employees, and UK -origin employees, where the latter also 
+includes those born abroad but who moved here before the age of (ap proximately) 16.  The 
+data is reported at the region and industry level and is available from 2014 to 2022. 
+ 
+For labour productivity, we use  the “Labour productivity by Industry and Region”  dataset, 
+published by the Office for National Statistics (ONS) . The dataset contains information on 
+labour productivity per job and per hour , reported again at the region -industry level, and is 
+available up to calendar year 2019; it has not been reported since the pandemic.   
+ 
+We merge the two datasets  by region, industr ial sector , and year, the three categorical 
+variables they have in common. The datasets classify regions by International Territorial Level 
+(ITL) 1 system and industries  by the Standard Industry Classification (SIC) 2007 codes.  The 
+ONS dataset aggregates a number of sectors; we aggregate the HMRC data to match.  
+ 
+We also exclude the real estate sector: in this particular dataset, ONS assign the value of 
+“imputed rent” , that is the o utput produced by homeowners ‘paying’ themselves rent for 
+their residence, to this sector, which results in a large upward distortion.  The HMRC data is 
+reported monthly; we use annual averages  to match the productivity data. This produces a 
+dataset with 12 regions, 6 industries and  6 years , i.e.  1152 observations, each of which 
+contains information about employment counts by  origin (UK, EU, and non -EU) and 
+productivity per job and per hour worked. 
+ 
+Descriptive Statistics 
+ 
+Figure 1 shows trends in productivity over the 2014-2019 period by sector. Productivity varies 
+significantly between sectors, with output per job (in 2019) ranging from £114,000 in finance 
+to £24,000 in accommodation and food services. And while, as noted above, productivity was 
+on average stagnant over this pe riod overall, there was substantial divergence between 
+sectors, with productivity in information and communication, growin by 20% over 2014-2019. 
+Conversely, productivity in public services only grew by 0.83%, and transportation shrank by 
+11% in the same period.  Interestingly, we find that t he productivity growth and levels of 
+productivity show a weak but positive correlation of 0.10, suggesting that high-output sectors 
+tend to grow more both in absolute and relative terms. This factor is explored in greater detail 
+in our regression analysis.  
+ 
+ 
+Figure 1 
+ 
+Figure 2 summarises the geographical trends in productivity. There is significant variance in 
+productivity by regio n, a lbeit less pronounced than sectoral differences.  Unsurprisingly, 
+London is by far the most productive region in the UK with average output of £78,600 per job, 
+followed by the South-East at £59 ,600; the lowest productivity regions were Wales and 
+Yorkshire and the Humber .  Amongst regions, w e find a slight positive correlation between 
+growth rates and levels of productivity, suggesting some small increasing regional divergence. 
+ 
+
+ 
+Figure 2 
+ 
+Figures 3 and 4 provide an overview of the trend s in migrant penetration across sectors.  By 
+the end of the period, EU-origin migrants made up about 8.6% of the workforce, up from 6.6% 
+at the start, while non-EU migrants were 6.7% of the workforce, up from 5.95%.   EU migrants 
+were particularly concentrated in accommodation and service activities, administrative and 
+support service  activities, and manufacturing.   By contrast, sectors with the highest 
+proportion of non -EU nationals included information and communications sector at 10.3%, 
+followed by accommodation and food service, human health and social work, administrative 
+and support service activities.  So while there are considerable overlaps, non-EU migrants are 
+overrepresented in some higher -skilled, higher productivity sectors whereas the reverse is 
+true for EU migrants.  
+ 
+
+ 
+Figure 3 
+ 
+ 
+ 
+Figure 4 
+ 
+ 
+
+Both EU and non-EU migrants are, however, very much concentrated in the London area. 
+Figure 5 reveals that  EU and non -EU migrants, in roughly equal parts, made up 38.5% of 
+London’s workforce in 2019 . In all other regions except for the North-East, EU migrants 
+outnumber non-EU migrants.  
+ 
+. 
+ 
+ 
+Figure 5 
+
+ 
+Figure 6 
+ 
+ 
+Before proceeding to the regression analysis, we look at the simple correlation between 
+changes in productivity and changes in migrant penetration. Figures 7 and 8 show the 
+correlation between changes in the proportion of workers of EU origin and productivity, first 
+by industry sector, and then  by sector-region over the entire period of our dataset (2014 to 
+2019); the latter plots all 192 sector -region observations used for the correlation  while the 
+former displays average changes in each industry.  A small negative correlation is observed, 
+although there is substantial heterogeneity.  
+ 
+Similarly, figures 9 and 10 do the same  for non-EU origin workers. Here the correlation is 
+positive, and somewhat stronger.  These are simple associations but  suggest that at an 
+aggregate level there is some negative association between productivity growth and EU 
+migration, and positive association for non -EU migrants, which we investigate further in the 
+next section. 
+ 
+
+ 
+Figure 7 
+ 
+Figure 8 
+ 
+
+ 
+Figure 9 
+ 
+ 
+Figure 10 
+ 
+ 
+
+Regression results 
+ 
+The descriptive analysis above shows some evidence of a positive association between non -
+EU origin migrants and productivity, and the reverse for EU -origin migrants. We proceed to 
+investigate this more formally, by regressing productivity at the region-sector level on migrant 
+penetration in the workforce, disaggregated between EU and non -EU origin worker s. Our 
+dependent variable in each case is (real) output per worker (ONS also published output per 
+hour; in our data, the correlation between output per worker and output per hour is 
+extremely strong, and using the latter makes effectively no difference to the results).  The key 
+independent variables are the percentage of the workforce made up of EU and non-EU origin 
+workers. 
+ 
+As for the impact of migration on wages, there are two potential approaches here seen in the 
+literature; to regress the *level* of productivity on migrant penetration, with the lagged value 
+of productivity as a control, and with region, sector and time fixed effects (as in, for example, 
+Nickell and Salaheen  (2017)); or to perform the same regression in first differences, which 
+removes the need for region and sector fixed effects (as in, for example, Dustmann , Frattini 
+and Preston). There is no clear reason to prefer one or the other – which is more appropriate 
+will likely depend on the structure of the errors: see Woolridge (2010). We do both.  
+ 
+For the latter approach, we also control for lagged productivity growth; the coefficient here 
+is negative and significant, suggesting some negative autocorrelation (this could well reflect 
+measurement error in productivity); and for the growth in total employment, again negative, 
+suggesting that sectors where the workforce is growing faster see somewhat slower 
+productivity growth. However, while we think this justified their inclusion, it doesn’t actually 
+change the results significantly (i .e., excluding these variables does not materially alter the 
+estimated coefficients on our variables of interest). We also show results weighted by total 
+employment, since the size of sectors (and to a lesser extent regions) varies significantly. 
+ 
+Our results show a reasonably clear association between non -EU origin migration and 
+productivity. For both the levels and the first differences regression, the coefficient suggests 
+that an “extra” 1% of the workforce from outside the EU is associated with an approximately 
+3% increase in productivity in the non-weighted regression, and an approximately 1.5% in the 
+weighted regression, although for the first difference regression this latter is not significant 
+at the 5% level. Combined with the graphs above, this appears to be reasonably strong 
+evidence of an association, although, as discussed below, we need to be cautious about 
+claiming causality. 
+.  
+ 
+Column (1) (2) (3) (4) (5) 
+Dependent Variable logProductivityperjob ∆Productivityperjob 
+Fixed effects No Yes Yes Yes Yes 
+Weighted No No Yes No Yes 
+Explanatory 
+Variable 
+     
+EUEmployment% -.03339     
+.0446 
+-.37139    
+.36146 
+-.04018    
+.27762 
+  
+nonEUEmployment
+% 
+.07858    
+.05762 
+2.96091**
+*    
+.88079 
+1.47134**
+*    
+.52783 
+  
+∆EUEmployment%    -.7041707    
+.5888755 
+-.0175677    
+.4453118 
+∆nonEUEmploymen
+t% 
+   3.092276*
+*    
+1.348519 
+1.369535*    
+.8201292 
+L1.Productivityperjo
+b 
+.9927001*
+**    
+.0047749 
+.3187454*
+**     
+.033791 
+.3700014*
+**     
+.033495 
+  
+L1.∆Productivityperj
+ob 
+   -.121919*
+**     
+.035562 
+-.1340132*
+**    
+.0358669 
+∆Totalemployment
+% 
+   -.2146397
+*    
+.1297999 
+-.1947434*    
+.1133202 
+      
+Cons .0800037    
+.0513989 
+7.222974*
+**    
+.3624533 
+6.691561*
+**    
+.3602099 
+.3428495    
+.5783661 
+.3668363    
+.4115159 
+R-squared 0.9785 0.5584 0.8377 0.0287 0.0346 
+Adjusted R-squared 0.9784   0.0197 0.0257 
+Table 1. Regression results 
+ 
+The results for EU -origin migrants are less clear. The coefficient estimates are consistently 
+negative, consistent with the descriptive statistics shown above. However, the estimates 
+never approach statistical significance , and are quite small, especially when weights are 
+applied. So while, taken together, the results may constitute suggestive evidence of an 
+association between EU -origin migration and slower productivity growth, they are also 
+consistent with a null effect overall. 
+ 
+As with the more common analyses of the impact of migration on wages, an obvious objection 
+to the regressions above is that migration patters may be endogeneous; that is, that changes 
+in productivity may drive migration rather than vice versa. However, the  assumption that 
+migration is exogeneous to productivity is rather less problematic than for wages: it is not 
+obvious whether a sector where productivity is growing fast would need, or attract, more or 
+fewer migrant workers (note that we control for employment growth overall).  
+ 
+The standard approach in the literature to this issue is to instrument migrant penetration (or 
+changes in migrant penetration), generally using some measure of pre -existing migrant 
+penetration as an instrument.  Unfortunately, this is problematic when using panel data over 
+a relatively short time period, as here; we did experiment with this approach, finding broadly 
+similar results, but given the weakness and questionable validity of the instrument here, this 
+is not wholly convincing; we would still prefer to describe our results as indicating an 
+association (or lack of association) rather than clear evidence of causality.   
+Interpretation and policy implications 
+ 
+The differential impacts of EU and non-EU migration could perhaps be most directly ascribed 
+to the heterogeneous skillsets and sectoral distributions between the two migrant groups, 
+shaped by the different nationality-based entry requirements to the UK during 2014-2019. In 
+this period, EU-origin migrants could enter and work in the UK under the free movement 
+system, while  non-EU origin migrants moving to work had to qualify under a relatively 
+restrictive system, which generally required a job offer paying significantly more than average 
+earnings in a relatively highly skilled occupation.   
+ 
+So the most obvious intuitive explanation is simply a batting average effect – that is, that 
+recent non-EU origin migrants are more highly skilled/highly paid, and hence more productive, 
+than EU-origin migrants (or UK-origin workers). However, this explanation is not likely in itself 
+to be sufficient. In fact, by no means all non-EU origin migrants in the workforce enter through 
+the selective work visa system: there are also large migration flows through other routes, 
+including students, refugees, “family” migration, and dependents. Most of these have the 
+right to work (with some restrictions for students).   
+ 
+As a consequence, there is substantial heterogeneity among non-EU origin employees. While 
+it is the case that median pay is somewhat higher for non -EU origin migrants than for UK -
+origin workers, which in turn is somewhat higher than for EU -origin workers, the differences 
+are not huge, and indeed there are large numbers of non -EU origin emp loyees in relatively 
+low wages (Fernández-Reino and Rienzo, 2021). Interestingly, recent analysis using a related 
+version of the same data set (Sumption, Portes and Brindle, 2023) found that the earnings of 
+non-EU workers first entering the employee workforce increased from the mid-2010s to 2021 
+(relative to both UK and EU-origin workers), suggesting that the average skills profile of non-
+EU migration increased over this period, at the same time as their overall numbers increased 
+rapidly. However, the association of non -EU origin employees with increased productivity is 
+far larger than can be explained simply by the batting average effect.   In other words, our 
+results imply that the workforce as a whole sees higher productivity growth in sectors and 
+regions where the non-EU origin workforce is growing faster ; no such impact (and, possibly, 
+the reverse) is the case for EU-origin employees.  
+ 
+There are a number of possible explanations for this observed association.  While our 
+econometric specifications (fixed effect regressions or first differences) abstract from fixed 
+sector-region effects, it may still be the case that employers respond to  local sector-specific 
+shocks in ways which drive a correlation between productivity growth and non-EU migration 
+(for example, if high growth/high productivity firms rely more on non -EU migrants, non -EU 
+migrants are more likely to set up or join high -growth firms, or the presence of a pool of 
+available non-EU migrants makes it easier for firms to grow faster).  
+ 
+.Any of these could plausibly play a role in the positive association of non -EU migration and 
+productivity.  As discussed above, we do not claim to have established causality in our analysis 
+above, and indeed these explanations are largely consistent with causality running in both 
+directions.  
+ 
+What are the implications of our results for the impact of the post-Brexit migration system 
+introduced in January 2021? As noted above and discussed in detail in Portes and Springford 
+(2023) and UK in a Changing Europe (2023), this has further accent uated the rise in non -EU 
+migration for work.  In the latest available data (Office for National Statistics, 2023) there was 
+a sharp rise in the number of non -EU origin employees, up by 494,000 (or 26.6%) in 2022 
+compared to 2019, while EU-origin employee numbers were down by more than 150,000. 
+ 
+In principle, if our results continue to hold in the post-pandemic period, this should provide a 
+modest boost to UK productivity over time.  It would also appear to justify the broad rationale 
+for the new system, which ends free movement while liberalising work migration more 
+broadly for relatively highly paid/highly skilled workers.   
+ 
+ However, it is worth noting that much of the recent growth in non -EU migration is in the 
+health and social care sector and has been driven in large part by the introduction of a new 
+Health and Care Visa, which is open to employees in even relatively low-paid roles. There has 
+also been a very large rise in the number of dependents arriving , particularly accompanying 
+those on student visas and many of whom are likely to be working.  It cannot therefore be 
+assumed that the previous association between productivity at a sector-region level holds for 
+the changing composition of non-EU migration.  
+ 
+ 
+ 
+ 
+ 
+Reference 
+ 
+Alesina, A., Harnoss, J. and Rapoport, H., 2016. Birthplace diversity and economic prosperity. 
+Journal of Economic Growth, 21, pp.101-138. 
+ 
+Brindle, B., Portes, J. and Sumption, M., 2023.  Upward mobility? Earnings trajectories for 
+recent immigrants .  Migration Observatory briefing, COMPAS, University of Oxford . 
+Available at:  https://migrationobservatory.ox.ac.uk/resources/commentaries/upward-
+mobility-earnings-trajectories-for-recent-immigrants/ (Accessed 23 September 2023).  
+ 
+Campo, F., Forte, G. and Portes, J., 2018. The impact of migration on productivity and native-
+born workers' training. 
+ 
+Costas-Fernandez, J., 2018. Examining the Link between Migration and Productivity. Report 
+for the Migration Advisory Committee. 
+ 
+Dustmann, C., Frattini, T. and Preston, I.P., 2013. The effect of immigration along the 
+distribution of wages. Review of Economic Studies, 80(1), pp.145-173. 
+ 
+Fernández-Reino, M. and Rienzo, C., 2021. Migrants in the UK labour market: An overview. 
+Migration Observatory briefing, COMPAS, University of Oxford. Available at: 
+https://migrationobservatory.ox.Ac.uk/resources/briefings/migrants-in-the-uk-labour-market-
+an-overview (Accessed: 5 September 2023). 
+ 
+ 
+HM Revenue & Customs (2023). ‘UK payrolled  employments by nationality, region and 
+industry, from July 2014 to June 2021’. Available at: 
+https://www.gov.uk/government/statistics/payrolled-employments-in-the-uk-by-region-
+industry-and-nationality-from-july-2014-to-june-2021 (Accessed: 5 September 2023). 
+ 
+Jaumotte, M.F., Koloskova, K. and Saxena, M.S.C., 2016. Impact of migration on income 
+levels in advanced economies. International Monetary Fund. 
+ 
+Krugman, P.R., 1997. The age of diminished expectations: US economic policy in the 1990s . 
+MIT press. 
+ 
+Migration Advisory Committee, 2018. EEA migration in the UK: Final report. Migration 
+Advisory Committee. 
+ 
+Nickell, S. and Saleheen, J., 2017. The impact of EU and Non -EU immigration on British 
+wages. IZA Journal of Development and Migration, 7(1), pp.1-28. 
+ 
+Office for National Statistics (2021). ‘Region by industry labour productivity ’. Available at: 
+https://www.ons.gov.uk/economy/economicoutputandproductivity/productivitymeasures/data
+sets/industrybyregionlabourproductivity (Accessed: 5 September 2023). 
+ 
+Office for National Statistics (2023). ‘Employments from Pay As  You Earn Real Time 
+Information: ad hoc estimates of payrolled employees by NUTS1 region and nationality ’. 
+Available at:  
+https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghou
+rs/datasets/employmentsfrompayasyouearnrealtimeinformationadhocestimatesofpayrolledem
+ployeesbynuts1regionandnationalityseasonallyadjusted (Accessed: 5 September 2023). 
+ 
+Ortega, F. and Peri, G., 2014. Openness and income: The roles of trade and migration. Journal 
+of international Economics, 92(2), pp.231-251. 
+ 
+Ottaviano, G.I. and Peri, G., 2006. The economic value of cultural diversity: evidence from US 
+cities. Journal of Economic geography, 6(1), pp.9-44. 
+ 
+Ottaviano, G.I., Peri, G. and Wright, G.C., 2018. Immigration, trade and productivity in 
+services: Evidence from UK firms. Journal of International Economics, 112, pp.88-108. 
+Peri, G., 2012. The effect of immigration on productivity: Evidence from US states. Review of 
+Economics and Statistics, 94(1), pp.348-358. 
+ 
+Portes, J. and Springford, J., 2023. The impact of the post-Brexit migration system on the UK 
+labour market. Contemporary Social Science, 18(2), pp.132-149. 
+ 
+Rolfe, H., Rienzo, C., Lalani, M. and Portes, J., 2013. Migration and productivity: employers’ 
+practices, public attitudes and statistical evidence. National Institute of Economic and Social 
+Research, 116. 
+ 
+Smith, J., 2018. Migration Productivity and Firm Performance. Report for the Migration 
+Advisory Committee. 
+ 
+UK in a Changing Europe  (2023). Immigration after Brexit: where are we going? Available 
+at:  
+https://ukandeu.ac.uk/wp-content/uploads/2023/03/Immigration-after-Brexit-UKICE-and-
+MigObs-2023.pdf (Accessed: 5 September 2023). 
+ 
+Woolridge, J (2010).  Econometric Analysis of Cross Section and Panel Data: Second Edition, 
+MIT Press, Boston.  
+ 
