@@ -103,20 +103,37 @@ def build_panel(exclude_real_estate=EXCLUDE_REAL_ESTATE):
     return df
 
 
-def run_models(df):
+def run_models(df, cluster=True):
+    """Fit the five Table 1 specifications.
+
+    Standard errors are cluster-robust by region-industry (cluster=True) by
+    default. The diagnostics (scripts/diagnostics.py) show residuals are
+    heteroskedastic and serially correlated within region-industry cells, so
+    plain OLS SEs understate uncertainty; clustering on `unit` is the
+    defensible inference. Set cluster=False for classical OLS SEs.
+    """
     lev = df.dropna(subset=["L1_log_prod"]).copy()
     fd = df.dropna(subset=["d_log_prod", "d_EU_pct", "d_nonEU_pct",
                            "L1_d_log_prod", "d_total_emp_pct"]).copy()
     LEV = "EU_emp_pct + nonEU_emp_pct + L1_log_prod"
     FD = "d_EU_pct + d_nonEU_pct + L1_d_log_prod + d_total_emp_pct"
+
+    def fit(formula, data, weights=None):
+        model = (smf.wls(formula, data, weights=weights) if weights is not None
+                 else smf.ols(formula, data))
+        if cluster:
+            return model.fit(cov_type="cluster",
+                             cov_kwds={"groups": data["unit"]})
+        return model.fit()
+
     return {
-        "(1) Levels no FE":     smf.ols(f"log_prod ~ {LEV}", lev).fit(),
-        "(2) Levels + FE":      smf.ols(f"log_prod ~ {LEV} + C(unit)", lev).fit(),
-        "(3) Levels + FE + wt": smf.wls(f"log_prod ~ {LEV} + C(unit)", lev,
-                                        weights=lev["total_emp"]).fit(),
-        "(4) FD + FE":          smf.ols(f"d_log_prod ~ {FD} + C(unit)", fd).fit(),
-        "(5) FD + FE + wt":     smf.wls(f"d_log_prod ~ {FD} + C(unit)", fd,
-                                        weights=fd["total_emp"]).fit(),
+        "(1) Levels no FE":     fit(f"log_prod ~ {LEV}", lev),
+        "(2) Levels + FE":      fit(f"log_prod ~ {LEV} + C(unit)", lev),
+        "(3) Levels + FE + wt": fit(f"log_prod ~ {LEV} + C(unit)", lev,
+                                    weights=lev["total_emp"]),
+        "(4) FD + FE":          fit(f"d_log_prod ~ {FD} + C(unit)", fd),
+        "(5) FD + FE + wt":     fit(f"d_log_prod ~ {FD} + C(unit)", fd,
+                                    weights=fd["total_emp"]),
     }
 
 
@@ -124,9 +141,10 @@ def _stars(p):
     return "***" if p < 0.01 else "**" if p < 0.05 else "*" if p < 0.1 else ""
 
 
-def print_table1(results):
+def print_table1(results, se_label="cluster-robust by region-industry"):
     print("\n" + "=" * 96)
     print("TABLE 1 RECREATION  (coefficient with significance; shares as fractions 0-1)")
+    print(f"Standard errors: {se_label}")
     print("=" * 96)
     rows = [
         ("EU Employment %", "EU_emp_pct"),
@@ -209,14 +227,35 @@ def sample_notes():
           "not a data difference.")
 
 
+def print_se_comparison(df):
+    """Show which non-EU significance stars survive cluster-robust SEs."""
+    print("\n" + "=" * 96)
+    print("INFERENCE: classical OLS vs cluster-robust (by region-industry) SEs")
+    print("=" * 96)
+    classical = run_models(df, cluster=False)
+    clustered = run_models(df, cluster=True)
+    var = {"(1) Levels no FE": "nonEU_emp_pct", "(2) Levels + FE": "nonEU_emp_pct",
+           "(3) Levels + FE + wt": "nonEU_emp_pct", "(4) FD + FE": "d_nonEU_pct",
+           "(5) FD + FE + wt": "d_nonEU_pct"}
+    print(f"  non-EU coefficient   {'coef':>9s}{'SE(OLS)':>10s}{'p(OLS)':>9s}"
+          f"{'SE(clu)':>10s}{'p(clu)':>9s}")
+    for name, v in var.items():
+        c, k = classical[name], clustered[name]
+        print(f"  {name:20s}{c.params[v]:>9.3f}{c.bse[v]:>10.3f}"
+              f"{c.pvalues[v]:>8.3f}{_stars(c.pvalues[v]):<1s}"
+              f"{k.bse[v]:>10.3f}{k.pvalues[v]:>8.3f}{_stars(k.pvalues[v]):<1s}")
+    print("  Clustering widens SEs; stars that survive are the credible results.")
+
+
 def main():
     df = build_panel()
     print(f"Merged regression panel: {len(df)} obs, "
           f"{df['unit'].nunique()} region-industry pairs, "
           f"years {sorted(df['year'].unique())}")
-    results = run_models(df)
+    results = run_models(df, cluster=True)
     print_table1(results)
     print_detail(results)
+    print_se_comparison(df)
     sample_notes()
     out = f"{PROC}/analysis_panel.csv"
     df.to_csv(out, index=False)

@@ -107,11 +107,34 @@ Motivated by suspicion of the log transform. See `scripts/diagnostics.py`.
 
 ---
 
+## 5. Cluster-robust standard errors
+
+The diagnostics show residuals are heteroskedastic and serially correlated within
+region-industry cells, so classical OLS SEs understate uncertainty. `analyze.py` now
+fits all five specs with **cluster-robust SEs clustered by region-industry** (180
+clusters); `run_models(cluster=False)` recovers classical SEs.
+
+**Which non-EU stars survive clustering:**
+
+| spec | coef | p (OLS) | p (clustered) |
+|---|---|---|---|
+| (1) Levels no FE | +0.078 | 0.197 | 0.100 * |
+| (2) Levels + FE | +2.260 | 0.002 *** | 0.013 ** |
+| (3) Levels + FE + wt | +2.188 | 0.000 *** | 0.001 *** |
+| (4) FD + FE | +1.059 | 0.642 | 0.646 |
+| (5) FD + FE + wt | +0.096 | 0.950 | 0.947 |
+
+- **The headline survives:** non-EU is still significant in the FE levels specs (2)
+  and (3) under clustering — the credible result.
+- EU share in (2) weakens from ** to * (p=0.068) — reinforces "negative but not
+  robustly significant".
+- FD specs were never significant; clustering doesn't change that.
+
+---
+
 ## Open / not yet done
 
-- **Cluster-robust standard errors** (cluster by region-industry) — the most material
-  outstanding robustness issue; would re-check which significance stars survive.
 - Dynamic-panel (Nickell) bias from lagged dependent + FE — acknowledged, not
   addressed (paper has the same issue).
-- Full coef/SE/CI inference for the FD columns (printed by `analyze.py`; non-EU not
-  significant there).
+- Real-estate-included robustness row (would match the paper's stated 1152 but
+  reintroduce the imputed-rent distortion).
