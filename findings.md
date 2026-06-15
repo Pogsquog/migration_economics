@@ -132,6 +132,44 @@ clusters); `run_models(cluster=False)` recovers classical SEs.
 
 ---
 
+## 6. Breaking out EU accession cohorts (EU14 / EU8 / EU2 / Other EU)
+
+See `scripts/eu_breakout.py`.
+
+**Data constraint.** The EU sub-groups are published **only at UK-national ×
+industry** level — never by region. (The NUTS1 nationality source has no sub-groups
+and no industry; the regional payroll file stops at EU vs non-EU.) So breaking out
+cohorts forces us to **drop the region dimension**, leaving a UK industry-level panel
+of **15 industries × 6 years ≈ 90 obs (75 after the lag)** — far smaller and
+lower-powered than the main region×industry panel, and without the cross-region
+variation that identifies the headline result. **Exploratory only.**
+
+Cohort shares of UK payrolled employment (2014–2019 mean): EU14 3.0%, EU8 3.4%,
+EU2 1.2%, Other EU **0.06%**, non-EU 5.8%.
+
+**Findings (read signs, not stars — coefficients are imprecise):**
+
+- **non-EU stays positive and significant** even in this tiny panel (pooled p=0.03,
+  +FE p<0.01) — consistent with the main result.
+- **No EU cohort is robustly distinguishable from zero.** EU14 and EU8 both lean
+  negative in the pooled spec; EU2 is ambiguous (sign flips across specs).
+- **Other EU is too small to estimate** (0.06% share): its coefficients (−12 pooled,
+  −156 with FE) are artefacts of a near-constant regressor and should be ignored,
+  including its spurious FE "significance".
+- With 15 industries and 90 obs, the FE spec is overfit (R²≈0.999) and unreliable;
+  the pooled+lag column is the more trustworthy of the two.
+
+**Takeaway:** a cohort breakout is *possible* but only at the UK level, where there's
+too little data to separate the EU sub-groups. The data cannot support a regional
+EU-cohort analysis. The slight overall negativity of the EU coefficient in the main
+panel appears to come from EU14/EU8 rather than EU2, but this is suggestive at best.
+
+**Caveat:** suppressed `<50` cells (0–15% of monthly values for the smaller cohorts)
+are summed as 0 when aggregating HMRC sub-sections, mildly understating the smallest
+cohort shares.
+
+---
+
 ## Open / not yet done
 
 - Dynamic-panel (Nickell) bias from lagged dependent + FE — acknowledged, not
